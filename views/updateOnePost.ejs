@@ -1,0 +1,18 @@
+<%- include('./components/header') %>
+<form method="post" action=/feed/edit/<%= result._id %>>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">Edit a Post</label>
+            <div class="mb-3">
+              <input type="text" name="title" class="form-control" value='<%= result.title %>'>
+            </div>
+            <div class="mb-3">
+              <textarea rows="10" cols="30" type="text" name="post" class="form-control"><%= result.post %></textarea>
+            </div>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+  </form>
+ <%- include('./components/footer') %>   

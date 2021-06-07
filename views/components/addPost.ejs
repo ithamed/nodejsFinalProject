@@ -1,0 +1,26 @@
+<%- include('./header') %>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form method="post" action="/feed">
+                <button type="submit" class="btn btn-primary">Add a Post</button>
+                <div class="mb-3">
+                <input type="text" name="title" class="form-control" placeholder="Name">
+                <% if(error && error.title) { %>
+                    <h6 style="color: red;"><%= error.title.message %></h6>
+                    <% } %>  
+                </div>
+                <div class="mb-3">
+                <textarea rows="10" cols="30" type="text" name="post" class="form-control" placeholder="Message" ></textarea>
+                <% if(error && error.post) { %>
+                    <h6 style="color: red;"><%= error.post.message %></h6>
+                    <% } %> 
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <h1>Welcome To Facebook</h1>
+        </div>
+    </div>
+</div>
+<%- include('./footer') %>

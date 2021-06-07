@@ -1,0 +1,13 @@
+body{
+    padding: 5%;
+}
+.card{
+    width: 80% !important;
+}
+.Facebook{
+    text-align: right;
+    width: 90%;
+}
+.btn{
+    margin: 1%;
+}

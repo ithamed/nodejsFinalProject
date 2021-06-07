@@ -1,0 +1,19 @@
+<%- include('./components/header') %>
+<div class="Facebook">
+    <h1>Welcome To Facebook</h1>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body row">
+        <div class="col">
+            <h5 class="card-title"><%= result.title %></h5>
+            <p class="card-text"><%= result.post %></p>
+        </div>
+        <div class="col">
+            <p><%= result.createdAt.toLocaleDateString("en-US") %></p>
+            <a href=/delete-post/<%= result._id %> class="btn btn-danger">Delete</a>
+            <a href=/feed/edit/<%= result._id %> class="btn btn-primary">Edit post</a>
+        </div>
+    </div>
+</div>
+
+ <%- include('./components/footer') %>   
